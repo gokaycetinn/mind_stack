@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Onboarding - Master Skills</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#20d3ee",
+                        "primary-dark": "#06b6d4",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#0F172A", 
+                        "surface-dark": "#1E293B",
+                        "surface-light": "#FFFFFF",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white h-screen overflow-hidden flex flex-col antialiased selection:bg-primary selection:text-slate-900">
+<!-- Top Bar / Navigation -->
+<header class="flex justify-between items-center px-6 py-6 pt-12 z-10 shrink-0">
+<!-- Logo/Brand placeholder -->
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-cyan-600 flex items-center justify-center shadow-lg shadow-primary/20">
+<span class="material-icons-round text-white text-lg">code</span>
+</div>
+<span class="font-bold text-lg tracking-tight hidden sm:block">MindStack</span>
+</div>
+<!-- Skip Button -->
+<button class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors">
+            Skip
+        </button>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col justify-center px-6 pb-4 relative z-0 overflow-y-auto">
+<!-- Background decorative elements -->
+<div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-cyan-600/10 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Headline Group -->
+<div class="mb-8">
+<h1 class="text-3xl md:text-4xl font-bold tracking-tight mb-3 text-slate-900 dark:text-white">
+                What you'll <span class="text-primary">master</span>
+</h1>
+<p class="text-slate-500 dark:text-slate-400 text-base leading-relaxed">
+                Unlock your full potential with our structured learning paths designed for modern engineering.
+            </p>
+</div>
+<!-- Cards Container -->
+<div class="space-y-4 w-full max-w-md mx-auto">
+<!-- Card 1: Algorithmic Thinking -->
+<div class="group relative p-4 rounded-xl bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700/50 shadow-sm hover:shadow-md hover:border-primary/50 dark:hover:border-primary/50 transition-all duration-300 flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
+<span class="material-icons-round text-primary text-2xl">account_tree</span>
+</div>
+<div>
+<h3 class="font-semibold text-slate-900 dark:text-white text-base mb-0.5">Algorithmic Thinking</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Break down complex logic efficiently.</p>
+</div>
+</div>
+<!-- Card 2: Problem Solving -->
+<div class="group relative p-4 rounded-xl bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700/50 shadow-sm hover:shadow-md hover:border-primary/50 dark:hover:border-primary/50 transition-all duration-300 flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
+<span class="material-icons-round text-primary text-2xl">extension</span>
+</div>
+<div>
+<h3 class="font-semibold text-slate-900 dark:text-white text-base mb-0.5">Problem Solving</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Debug and refactor with confidence.</p>
+</div>
+</div>
+<!-- Card 3: Real-world Scenarios -->
+<div class="group relative p-4 rounded-xl bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700/50 shadow-sm hover:shadow-md hover:border-primary/50 dark:hover:border-primary/50 transition-all duration-300 flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
+<span class="material-icons-round text-primary text-2xl">dns</span>
+</div>
+<div>
+<h3 class="font-semibold text-slate-900 dark:text-white text-base mb-0.5">Real-world Dev Scenarios</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Practical challenges, not just theory.</p>
+</div>
+</div>
+<!-- Card 4: AI-Assisted Coding -->
+<div class="group relative p-4 rounded-xl bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700/50 shadow-sm hover:shadow-md hover:border-primary/50 dark:hover:border-primary/50 transition-all duration-300 flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
+<span class="material-icons-round text-primary text-2xl">auto_awesome</span>
+</div>
+<div>
+<h3 class="font-semibold text-slate-900 dark:text-white text-base mb-0.5">AI-Assisted Coding</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Leverage LLMs for faster output.</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Action Area -->
+<footer class="px-6 pb-8 pt-4 bg-background-light dark:bg-background-dark z-10 shrink-0">
+<div class="max-w-md mx-auto flex flex-col gap-6">
+<!-- Progress Indicators -->
+<div aria-label="Progress" class="flex justify-center items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+<div class="w-8 h-2 rounded-full bg-primary shadow-[0_0_10px_rgba(32,211,238,0.4)]"></div>
+<div class="w-2 h-2 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+<div class="w-2 h-2 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+</div>
+<!-- Primary Action Button -->
+<button class="w-full py-3.5 px-6 rounded-xl bg-primary hover:bg-primary-dark text-slate-900 font-bold text-lg shadow-[0_4px_14px_0_rgba(32,211,238,0.39)] transition-all transform active:scale-[0.98] flex items-center justify-center gap-2">
+                Continue
+                <span class="material-icons-round text-xl">arrow_forward</span>
+</button>
+</div>
+</footer>
+</body></html>

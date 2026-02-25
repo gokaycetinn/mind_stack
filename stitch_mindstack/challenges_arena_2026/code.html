@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MindStack Arena - Challenges</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#20d3ee",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#0F172A",
+                        "card-dark": "#1E293B",
+                        "accent-purple": "#8B5CF6"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(32, 211, 238, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        .glow-cyan {
+            box-shadow: 0 0 15px rgba(32, 211, 238, 0.3);
+        }
+        .glow-purple {
+            box-shadow: 0 0 15px rgba(139, 92, 246, 0.2);
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col font-display">
+<!-- Header Section -->
+<header class="sticky top-0 z-50 flex items-center justify-between px-6 py-4 bg-background-dark/80 backdrop-blur-md">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full border-2 border-primary/30 p-0.5">
+<img class="size-full rounded-full object-cover" data-alt="User profile avatar premium styling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaatInj2CZ-AscEqTPwSp3k08oAHHgaWg-T6QJwxAWDSzHdYJVllm00v6M_vHaTjoYNPbyqMx3IKrSfQ_xshw1tazIwKIthkCYsNS-E-fvLEaO256iQ_RslYMDUL5yqi-rqyDRkNpIuV8_BVGCAXhyDrAQvUi_9U1WkPZ8EmA5_czy9_Yj2g6DmWHiDGS7PIhhOH18Sevn0wgQ4eSNOY-db2FWVHpc1HuiPd1z8XiBbfxjuRtwKfYFS6MAm7Wh4Y-Cwg_T00a-2U22"/>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-white">MindStack Arena</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="relative p-2 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-primary rounded-full animate-pulse"></span>
+</button>
+</div>
+</header>
+<main class="flex-1 px-6 pb-24 overflow-y-auto">
+<!-- Weekly Arena Hero -->
+<section class="mt-4">
+<div class="relative overflow-hidden rounded-2xl p-px bg-gradient-to-br from-primary/50 to-transparent shadow-2xl">
+<div class="glass-card rounded-2xl p-6 relative z-10 overflow-hidden">
+<!-- Background decorative glow -->
+<div class="absolute -top-24 -right-24 size-48 bg-primary/20 blur-[60px] rounded-full"></div>
+<div class="flex justify-between items-start mb-6">
+<div>
+<span class="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-1 block">Live Competition</span>
+<h2 class="text-3xl font-bold text-white mb-1">Weekly Arena</h2>
+<p class="text-slate-400 text-sm">Season 12 • Global Stage</p>
+</div>
+<div class="bg-primary/10 border border-primary/20 rounded-xl px-3 py-1.5 flex flex-col items-center">
+<span class="text-[10px] font-bold text-primary uppercase">Rank</span>
+<span class="text-lg font-bold text-white leading-none">Top 5%</span>
+</div>
+</div>
+<div class="flex items-end justify-between gap-4">
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-slate-300">
+<span class="material-symbols-outlined text-sm">timer</span>
+<span class="text-sm font-medium">Ends in: <span class="text-white font-mono">14h 22m 08s</span></span>
+</div>
+<div class="w-48 h-1.5 bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-2/3 glow-cyan"></div>
+</div>
+</div>
+<button class="bg-primary text-background-dark px-5 py-2.5 rounded-xl font-bold text-sm hover:scale-105 transition-transform active:scale-95 glow-cyan">
+                            View Leaderboard
+                        </button>
+</div>
+</div>
+<!-- Layered depth background image -->
+<div class="absolute inset-0 z-0 opacity-20 pointer-events-none bg-[url('https://placeholder.pics/svg/800')] bg-cover bg-center" data-alt="Abstract cyber geometric pattern"></div>
+</div>
+</section>
+<!-- Active Challenges -->
+<section class="mt-10">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-lg font-bold text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">rocket_launch</span>
+                    Active Challenges
+                </h3>
+<button class="text-xs font-semibold text-slate-400 hover:text-white transition-colors">See all</button>
+</div>
+<div class="space-y-4">
+<!-- Logic Duel -->
+<div class="group relative bg-card-dark rounded-2xl border border-slate-800 p-4 transition-all hover:border-primary/40 hover:bg-slate-800/80 cursor-pointer overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="relative flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="size-14 rounded-xl bg-slate-900 border border-slate-700 flex items-center justify-center glow-cyan shadow-inner">
+<span class="material-symbols-outlined text-primary text-3xl">swords</span>
+</div>
+<div>
+<h4 class="text-white font-bold text-base">Logic Duel</h4>
+<p class="text-slate-400 text-sm">1v1 Real-time Battle</p>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-xs font-bold text-primary mb-1">+250 XP</span>
+<div class="flex -space-x-2">
+<img class="size-6 rounded-full border-2 border-card-dark bg-slate-700" data-alt="Competitor avatar 1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDu7eRNLeBfMvam2trBBjBCzQVihYT4ur0NJ7KzBzj85Hraeg-4Rc2qRrOE9EU5gf8Euy0G7qZ314ft_Tm4lC-RwSLlErA72_IoHotu-mPwiyFDeLgLgyU9D5rT082yH9TqyG5vng-zawU9yCc1dYeTOCCCYjnFrOCGX4XPnz4xmkVRqYaeHHhqUc5ekwrlypordZCHH88ReAJR3Zhp5TPXMZTmB4tRpAW3KBmuGxylNze_ibbo_H4M3HMR2ZNGGRHOjXG5PdgvSAPn"/>
+<img class="size-6 rounded-full border-2 border-card-dark bg-slate-700" data-alt="Competitor avatar 2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLESKaOJK6bjOP-w_42NpBUkhXWYfLJHtVzKgBQOzWR825_eQ3iZc7pBHvNnYCBi6oKGeyy-Phv6v3qnJFp5jiNWxiat8hiERjhUr7YFKMN-T5hFrA-_zAFeiaZr2GZO96HVrKQ3ZFhlpnB2iH5h9CDk6B2zkjywyBoNP_wk-STQllcnO4V7SfchAQThiKnGzsFcY5ipwT2xLdnwezeSdzgYVIxfx2ofuHANovwtYgSk8aMtaCv_ZaaPNM0nywlGSF72Vc78qXmv7B"/>
+<div class="size-6 rounded-full border-2 border-card-dark bg-slate-800 flex items-center justify-center text-[8px] font-bold text-slate-400">+12</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Speed Refactor -->
+<div class="group relative bg-card-dark rounded-2xl border border-slate-800 p-4 transition-all hover:border-accent-purple/40 hover:bg-slate-800/80 cursor-pointer overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-r from-accent-purple/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="relative flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="size-14 rounded-xl bg-slate-900 border border-slate-700 flex items-center justify-center glow-purple shadow-inner">
+<span class="material-symbols-outlined text-accent-purple text-3xl">bolt</span>
+</div>
+<div>
+<h4 class="text-white font-bold text-base">Speed Refactor</h4>
+<p class="text-slate-400 text-sm">Optimize the legacy code</p>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-xs font-bold text-accent-purple mb-1">Hardcore</span>
+<span class="material-symbols-outlined text-slate-600">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- System Design Sprint -->
+<div class="group relative bg-card-dark rounded-2xl border border-slate-800 p-4 transition-all hover:border-primary/40 hover:bg-slate-800/80 cursor-pointer overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="relative flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="size-14 rounded-xl bg-slate-900 border border-slate-700 flex items-center justify-center glow-cyan shadow-inner">
+<span class="material-symbols-outlined text-primary text-3xl">hub</span>
+</div>
+<div>
+<h4 class="text-white font-bold text-base">System Design Sprint</h4>
+<p class="text-slate-400 text-sm">Architecture whiteboard</p>
+</div>
+</div>
+<div class="flex flex-col items-end text-slate-500">
+<span class="text-xs font-bold">In Progress</span>
+<span class="text-[10px]">Step 3/5</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Navigation Bar -->
+<nav class="fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-md h-16 bg-slate-900/90 backdrop-blur-xl rounded-2xl border border-slate-800/50 flex items-center justify-around px-2 shadow-2xl z-50">
+<a class="flex flex-col items-center gap-1 text-slate-500 hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-2xl">home</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-2xl">school</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Learn</span>
+</a>
+<a class="relative flex flex-col items-center gap-1 text-primary" href="#">
+<div class="absolute -top-10 size-12 bg-primary/20 rounded-full blur-xl animate-pulse"></div>
+<span class="material-symbols-outlined text-2xl fill-1">military_tech</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Challenges</span>
+<div class="h-1 w-1 bg-primary rounded-full mt-0.5 shadow-[0_0_8px_#20d3ee]"></div>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-2xl">person</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Profile</span>
+</a>
+</nav>
+</body></html>

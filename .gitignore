@@ -1,0 +1,13 @@
+.DS_Store
+.actool_out/
+.derivedData/
+.derivedData_iphoneos/
+.home/
+
+# Xcode user-specific files
+**/xcuserdata/
+*.xcuserstate
+
+# Build artifacts
+build/
+DerivedData/

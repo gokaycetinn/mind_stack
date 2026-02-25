@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MindStack - Onboarding Final CTA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#20d3ee",
+                        "background-light": "#f6f8f8",
+                        // Using the Slate 900 requested in the prompt as the dark base
+                        "background-dark": "#0F172A", 
+                        "slate-850": "#162032",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                    boxShadow: {
+                        'glow': '0 0 40px -10px rgba(32, 211, 238, 0.5)',
+                        'glow-strong': '0 0 60px -15px rgba(32, 211, 238, 0.7)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom gradient text utility */
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* Subtle animation for the flame glow */
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 0.6; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.05); }
+        }
+        .animate-glow {
+            animation: pulse-glow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased min-h-screen flex items-center justify-center p-4">
+<!-- Mobile Container -->
+<div class="w-full max-w-sm mx-auto h-[812px] relative flex flex-col bg-white dark:bg-slate-850 rounded-[2.5rem] overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800">
+<!-- Status Bar Area (Mock) -->
+<div class="h-12 w-full flex justify-between items-center px-6 pt-2 z-20">
+<span class="text-xs font-semibold dark:text-slate-400">9:41</span>
+<div class="flex gap-1.5">
+<div class="w-4 h-4 rounded-full bg-slate-200 dark:bg-slate-700/50"></div>
+<div class="w-4 h-4 rounded-full bg-slate-200 dark:bg-slate-700/50"></div>
+</div>
+</div>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col items-center justify-center relative px-8 z-10">
+<!-- Glow Effects Background -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/20 blur-[80px] rounded-full pointer-events-none animate-glow"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-purple-500/20 blur-[60px] rounded-full pointer-events-none mix-blend-overlay"></div>
+<!-- Hero Visual: Flame Icon -->
+<div class="relative mb-12 group">
+<!-- Inner Flame Icon -->
+<div class="relative z-10 w-32 h-32 flex items-center justify-center">
+<svg class="w-full h-full drop-shadow-lg" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient gradientunits="userSpaceOnUse" id="flameGradient" x1="4" x2="20" y1="20" y2="4">
+<stop offset="0%" stop-color="#20d3ee"></stop> <!-- Cyan -->
+<stop offset="100%" stop-color="#a855f7"></stop> <!-- Purple -->
+</lineargradient>
+<filter height="200%" id="glowFilter" width="200%" x="-50%" y="-50%">
+<fegaussianblur result="coloredBlur" stddeviation="2.5"></fegaussianblur>
+<femerge>
+<femergenode in="coloredBlur"></femergenode>
+<femergenode in="SourceGraphic"></femergenode>
+</femerge>
+</filter>
+</defs>
+<path d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.047 8.287 8.287 0 009 9.601a8.983 8.983 0 013.361-6.867 4.884 4.884 0 003.001 2.48z" fill="url(#flameGradient)" filter="url(#glowFilter)" stroke="white" stroke-opacity="0.3" stroke-width="0.5"></path>
+<path d="M12 14a2 2 0 100 4 2 2 0 000-4z" fill="#fff" fill-opacity="0.9"></path>
+</svg>
+</div>
+</div>
+<!-- Text Content -->
+<div class="text-center space-y-4 relative z-10">
+<h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white leading-tight">
+                    Train your <br/>
+<span class="bg-gradient-to-r from-primary to-purple-400 text-gradient">developer brain</span>
+</h1>
+<p class="text-slate-500 dark:text-slate-400 text-lg font-medium">
+                    Consistency beats talent.
+                </p>
+<p class="text-sm text-slate-400 dark:text-slate-500 max-w-[240px] mx-auto leading-relaxed">
+                    Build a daily streak to master algorithms and system design.
+                </p>
+</div>
+</main>
+<!-- Footer Actions -->
+<footer class="px-8 pb-10 pt-4 flex flex-col items-center gap-6 z-10 relative">
+<!-- Primary Button -->
+<button class="w-full bg-primary hover:bg-cyan-300 text-slate-900 font-bold text-lg py-4 px-6 rounded-2xl shadow-glow transition-all active:scale-[0.98] active:shadow-none flex items-center justify-center gap-2 group">
+                Start Learning
+                <span class="material-icons text-xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<!-- Secondary Button -->
+<button class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary font-medium text-sm transition-colors py-2">
+                I already code
+            </button>
+<!-- Progress Indicators -->
+<div class="flex items-center gap-3 mt-2">
+<div class="w-2 h-2 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+<div class="w-2 h-2 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+<div class="w-2 h-2 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+<!-- Active Step -->
+<div class="w-6 h-2 rounded-full bg-primary shadow-[0_0_10px_rgba(32,211,238,0.5)]"></div>
+</div>
+</footer>
+<!-- Decorative overlay for screen glare feel -->
+<div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent pointer-events-none rounded-[2.5rem]"></div>
+</div>
+</body></html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MindStack Splash Screen</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#22D3EE", // Cyan-400
+                        "primary-glow": "#06B6D4", // Cyan-500
+                        "background-dark": "#0F172A",
+                        "background-darker": "#020617", // Slate-950 for gradient depth
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'breathe': 'breathe 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        breathe: {
+                            '0%, 100%': { opacity: '0.4', transform: 'scale(1)' },
+                            '50%': { opacity: '0.7', transform: 'scale(1.1)' },
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }.bg-radial-premium {
+            background: radial-gradient(circle at 50% 40%, #1e293b 0%, #0F172A 60%, #020617 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-radial-premium font-display antialiased h-screen w-full overflow-hidden flex flex-col items-center justify-center relative selection:bg-primary selection:text-background-dark">
+<div class="absolute inset-0 pointer-events-none overflow-hidden">
+<div class="absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px]"></div>
+<div class="absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-blue-500/10 rounded-full blur-[80px]"></div>
+</div>
+<main class="relative z-10 flex flex-col items-center justify-center space-y-10 p-6 w-full max-w-sm mx-auto">
+<div class="relative flex items-center justify-center">
+<div class="absolute inset-0 bg-primary/20 blur-[60px] rounded-full scale-150 animate-pulse-slow"></div>
+<div class="absolute inset-0 bg-primary-glow/30 blur-[40px] rounded-full scale-110"></div>
+<div class="absolute inset-0 bg-primary/40 blur-[20px] rounded-full scale-105 animate-breathe"></div>
+<div class="relative w-28 h-28 flex items-center justify-center z-10">
+<svg class="w-20 h-20 text-white drop-shadow-[0_0_25px_rgba(34,211,238,0.8)]" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24">
+<path class="stroke-[2.5px] drop-shadow-[0_0_8px_#22D3EE]" d="M4 7l-2 5 2 5"></path>
+<path class="stroke-[2.5px] drop-shadow-[0_0_8px_#22D3EE]" d="M20 7l2 5-2 5"></path>
+<path class="opacity-90" d="M9 12a3 3 0 1 0 6 0"></path>
+<path class="opacity-90" d="M12 9v6"></path>
+<path class="opacity-90" d="M9.5 9.5L14.5 14.5"></path>
+<path class="opacity-90" d="M14.5 9.5L9.5 14.5"></path>
+<circle class="animate-pulse drop-shadow-[0_0_10px_#22D3EE]" cx="12" cy="6" fill="#22D3EE" r="2"></circle>
+<circle class="animate-pulse drop-shadow-[0_0_10px_#22D3EE]" cx="12" cy="18" fill="#22D3EE" r="2" style="animation-delay: 1.5s;"></circle>
+</svg>
+</div>
+</div>
+<div class="text-center flex flex-col items-center space-y-3">
+<h1 class="text-5xl font-[800] tracking-tight text-white drop-shadow-xl leading-none">
+<span class="bg-clip-text text-transparent bg-gradient-to-br from-white via-white to-primary/60">
+                    MindStack
+                </span>
+</h1>
+<p class="text-slate-400 font-medium text-sm tracking-[0.2em] uppercase opacity-60">
+                Think like a developer
+            </p>
+</div>
+</main>
+<div class="absolute bottom-10 flex flex-col items-center opacity-40">
+<div class="w-10 h-1 bg-white/10 rounded-full overflow-hidden mb-2">
+<div class="h-full bg-primary/80 w-1/3 animate-[shimmer_2s_infinite_linear] rounded-full"></div>
+</div>
+</div>
+<style>
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(300%); }
+        }
+    </style>
+
+</body></html>

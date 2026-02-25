@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MindStack Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#20d3ee",
+              "primary-dark": "#06b6d4",
+              "background-light": "#f6f8f8",
+              "background-dark": "#101f22",
+              "card-dark": "#162a2e",
+              "card-lighter": "#1c353a",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {
+              "DEFAULT": "0.25rem", 
+              "lg": "0.5rem", 
+              "xl": "0.75rem",
+              "2xl": "1rem", 
+              "3xl": "1.5rem",
+              "full": "9999px"
+            },
+            boxShadow: {
+              'glow': '0 0 20px -5px rgba(32, 211, 238, 0.3)',
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        /* Custom scrollbar hide for clean look */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 min-h-screen font-display antialiased overflow-hidden flex justify-center bg-fixed">
+<!-- Mobile Container -->
+<div class="w-full max-w-md h-screen relative flex flex-col bg-background-light dark:bg-background-dark overflow-hidden shadow-2xl mx-auto border-x border-slate-200 dark:border-slate-800/50">
+<!-- Header Section -->
+<header class="pt-12 px-6 pb-6 flex flex-col gap-6 z-10 relative">
+<!-- Top Bar -->
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="relative w-10 h-10 rounded-full overflow-hidden border-2 border-slate-200 dark:border-slate-700">
+<img alt="User Profile" class="object-cover w-full h-full" data-alt="Portrait of a young male developer smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSszMN7EOLhdwXcS9wVWyj40UqBQ0yhdY3_Isi3umilNFGuLchI3xw4B1pSxQAliFpZHHINKWocKu3CONNYBymj4eioRIpR5DaCIOUAzwaRfBOfbRIhAzi-G-R2JP2OS1ux3s0HuFBdDZniEem56bK1sSC5SND1j3qn-8avzUBl58kNap96ulp0DVwJeC-Ip1XD9Uktstm6v4fi3duXjJeIXMNUMztiq2STPt1yuhp3HErGUt0KMzgB_NfGt4HvWgoBv8jDq9B1VzT"/>
+</div>
+<div class="flex flex-col">
+<span class="text-xs text-slate-500 dark:text-slate-400 font-medium uppercase tracking-wider">Welcome back</span>
+<span class="text-sm font-bold text-slate-900 dark:text-white">Alex Dev</span>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-orange-500/10 dark:bg-orange-500/20 px-3 py-1.5 rounded-full border border-orange-500/20">
+<span class="material-icons-round text-orange-500 text-sm">local_fire_department</span>
+<span class="text-sm font-bold text-orange-600 dark:text-orange-400">Day 5</span>
+</div>
+</div>
+<!-- Level Progress -->
+<div class="bg-white dark:bg-card-dark rounded-2xl p-5 shadow-sm border border-slate-200 dark:border-slate-700/50">
+<div class="flex justify-between items-end mb-2">
+<div>
+<span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Current Level</span>
+<h2 class="text-xl font-bold text-primary drop-shadow-[0_0_8px_rgba(32,211,238,0.2)]">Junior Thinker</h2>
+</div>
+<span class="text-sm font-bold text-slate-900 dark:text-white">1,240 XP</span>
+</div>
+<!-- Progress Bar -->
+<div class="relative w-full h-3 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full bg-primary shadow-[0_0_15px_rgba(32,211,238,0.6)] rounded-full" style="width: 65%;"></div>
+</div>
+<div class="mt-2 text-right">
+<span class="text-[10px] text-slate-400 dark:text-slate-500 font-medium">360 XP to next level</span>
+</div>
+</div>
+</header>
+<!-- Main Content Area - Scrollable -->
+<main class="flex-1 overflow-y-auto px-6 pb-28 no-scrollbar relative z-0">
+<!-- Today's Training Section -->
+<div class="mb-4 flex items-center justify-between">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Today's Training</h3>
+<span class="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded">11 min total</span>
+</div>
+<!-- Card Container -->
+<div class="bg-white dark:bg-card-dark rounded-3xl p-1 shadow-lg border border-slate-200 dark:border-slate-700/50">
+<!-- Task List -->
+<div class="flex flex-col gap-1">
+<!-- Task Item 1 -->
+<div class="group relative overflow-hidden bg-slate-50 dark:bg-card-lighter hover:bg-slate-100 dark:hover:bg-slate-700/50 transition-all duration-300 rounded-2xl p-4 cursor-pointer border border-transparent hover:border-primary/30">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-purple-500/10 dark:bg-purple-500/20 flex items-center justify-center text-purple-600 dark:text-purple-400 group-hover:bg-purple-500 group-hover:text-white transition-colors duration-300">
+<span class="material-icons-round text-lg">psychology</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-slate-900 dark:text-slate-100 text-sm mb-0.5">Algorithmic Thinking</h4>
+<span class="text-xs text-slate-500 dark:text-slate-400 flex items-center gap-1">
+<span class="w-1 h-1 rounded-full bg-purple-500"></span> Logic Base
+                                </span>
+</div>
+<div class="text-right">
+<span class="block text-xs font-bold text-slate-900 dark:text-white">2 min</span>
+<span class="material-icons-round text-slate-300 dark:text-slate-600 text-lg">play_circle</span>
+</div>
+</div>
+</div>
+<!-- Task Item 2 -->
+<div class="group relative overflow-hidden bg-slate-50 dark:bg-card-lighter hover:bg-slate-100 dark:hover:bg-slate-700/50 transition-all duration-300 rounded-2xl p-4 cursor-pointer border border-transparent hover:border-primary/30">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-blue-500/10 dark:bg-blue-500/20 flex items-center justify-center text-blue-600 dark:text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition-colors duration-300">
+<span class="material-icons-round text-lg">code</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-slate-900 dark:text-slate-100 text-sm mb-0.5">Problem Solving</h4>
+<span class="text-xs text-slate-500 dark:text-slate-400 flex items-center gap-1">
+<span class="w-1 h-1 rounded-full bg-blue-500"></span> Challenge
+                                </span>
+</div>
+<div class="text-right">
+<span class="block text-xs font-bold text-slate-900 dark:text-white">4 min</span>
+<span class="material-icons-round text-slate-300 dark:text-slate-600 text-lg">lock</span>
+</div>
+</div>
+</div>
+<!-- Task Item 3 -->
+<div class="group relative overflow-hidden bg-slate-50 dark:bg-card-lighter hover:bg-slate-100 dark:hover:bg-slate-700/50 transition-all duration-300 rounded-2xl p-4 cursor-pointer border border-transparent hover:border-primary/30">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-emerald-500/10 dark:bg-emerald-500/20 flex items-center justify-center text-emerald-600 dark:text-emerald-400 group-hover:bg-emerald-500 group-hover:text-white transition-colors duration-300">
+<span class="material-icons-round text-lg">terminal</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-slate-900 dark:text-slate-100 text-sm mb-0.5">Dev Scenario</h4>
+<span class="text-xs text-slate-500 dark:text-slate-400 flex items-center gap-1">
+<span class="w-1 h-1 rounded-full bg-emerald-500"></span> Simulation
+                                </span>
+</div>
+<div class="text-right">
+<span class="block text-xs font-bold text-slate-900 dark:text-white">3 min</span>
+<span class="material-icons-round text-slate-300 dark:text-slate-600 text-lg">lock</span>
+</div>
+</div>
+</div>
+<!-- Task Item 4 -->
+<div class="group relative overflow-hidden bg-slate-50 dark:bg-card-lighter hover:bg-slate-100 dark:hover:bg-slate-700/50 transition-all duration-300 rounded-2xl p-4 cursor-pointer border border-transparent hover:border-primary/30">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-pink-500/10 dark:bg-pink-500/20 flex items-center justify-center text-pink-600 dark:text-pink-400 group-hover:bg-pink-500 group-hover:text-white transition-colors duration-300">
+<span class="material-icons-round text-lg">smart_toy</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-slate-900 dark:text-slate-100 text-sm mb-0.5">AI Task</h4>
+<span class="text-xs text-slate-500 dark:text-slate-400 flex items-center gap-1">
+<span class="w-1 h-1 rounded-full bg-pink-500"></span> Future Tech
+                                </span>
+</div>
+<div class="text-right">
+<span class="block text-xs font-bold text-slate-900 dark:text-white">2 min</span>
+<span class="material-icons-round text-slate-300 dark:text-slate-600 text-lg">lock</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Optional: Motivational Quote / Insight -->
+<div class="mt-6 p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-background-dark/50">
+<div class="flex gap-3">
+<span class="material-icons-round text-primary text-xl">lightbulb</span>
+<p class="text-xs text-slate-600 dark:text-slate-400 italic leading-relaxed">
+                        "First, solve the problem. Then, write the code." <br/>
+<span class="not-italic text-slate-400 dark:text-slate-500 mt-1 block font-medium">— John Johnson</span>
+</p>
+</div>
+</div>
+</main>
+<!-- Bottom Action Area -->
+<div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-background-light via-background-light to-transparent dark:from-background-dark dark:via-background-dark dark:to-transparent z-20">
+<button class="w-full bg-primary hover:bg-primary-dark active:scale-[0.98] transition-all text-background-dark font-bold py-4 px-6 rounded-xl shadow-glow text-lg flex items-center justify-center gap-2 group">
+<span class="material-icons-round group-hover:translate-x-1 transition-transform">play_arrow</span>
+                Start Session
+            </button>
+<!-- Bottom Navigation Mockup -->
+<div class="flex justify-around items-center mt-6 pt-2 border-t border-slate-200 dark:border-slate-800/50">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-icons-round">dashboard</span>
+<span class="text-[10px] font-medium">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 transition-colors">
+<span class="material-icons-round">bar_chart</span>
+<span class="text-[10px] font-medium">Stats</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 transition-colors">
+<span class="material-icons-round">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</div>
+</div>
+<!-- Decorative Background Elements -->
+<div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-primary/10 rounded-full blur-[80px] pointer-events-none"></div>
+<div class="absolute bottom-40 left-0 -ml-20 w-60 h-60 bg-purple-500/10 rounded-full blur-[60px] pointer-events-none"></div>
+</div>
+</body></html>

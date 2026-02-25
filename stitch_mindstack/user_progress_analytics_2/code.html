@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MindStack - User Progress Analytics</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#20d3ee",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#101f22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hiding for clean mobile look */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200 antialiased selection:bg-primary selection:text-black">
+<!-- Mobile Container (Simulating iOS Viewport) -->
+<div class="mx-auto max-w-md min-h-screen relative flex flex-col pb-24">
+<!-- Header -->
+<header class="sticky top-0 z-30 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md px-6 pt-12 pb-4 flex items-center justify-between border-b border-slate-200 dark:border-white/5">
+<button class="p-2 -ml-2 rounded-full hover:bg-slate-200 dark:hover:bg-white/5 transition-colors text-slate-500 dark:text-slate-400">
+<span class="material-icons-round text-2xl">arrow_back</span>
+</button>
+<h1 class="text-lg font-semibold tracking-tight text-slate-900 dark:text-white">Analytics</h1>
+<button class="p-2 -mr-2 rounded-full hover:bg-slate-200 dark:hover:bg-white/5 transition-colors text-slate-500 dark:text-slate-400">
+<span class="material-icons-round text-2xl">more_horiz</span>
+</button>
+</header>
+<!-- Scrollable Content -->
+<main class="flex-1 px-6 py-6 space-y-8">
+<!-- Streak Section -->
+<section>
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-sm font-medium uppercase tracking-wider text-slate-500 dark:text-slate-400">Weekly Activity</h2>
+<div class="flex items-center space-x-1 bg-primary/10 dark:bg-primary/20 px-3 py-1 rounded-full">
+<span class="material-icons-round text-base text-primary">local_fire_department</span>
+<span class="text-xs font-bold text-primary">12 Day Streak</span>
+</div>
+</div>
+<div class="bg-white dark:bg-white/5 border border-slate-200 dark:border-white/5 rounded-xl p-5 shadow-sm">
+<div class="flex justify-between items-center text-center">
+<!-- Monday -->
+<div class="flex flex-col items-center gap-2">
+<span class="text-xs text-slate-400 font-medium">M</span>
+<div class="w-8 h-8 rounded-full flex items-center justify-center bg-primary text-black font-bold text-xs shadow-[0_0_15px_-3px_rgba(32,211,238,0.5)]">
+<span class="material-icons-round text-sm">check</span>
+</div>
+</div>
+<!-- Tuesday -->
+<div class="flex flex-col items-center gap-2">
+<span class="text-xs text-slate-400 font-medium">T</span>
+<div class="w-8 h-8 rounded-full flex items-center justify-center bg-primary text-black font-bold text-xs shadow-[0_0_15px_-3px_rgba(32,211,238,0.5)]">
+<span class="material-icons-round text-sm">check</span>
+</div>
+</div>
+<!-- Wednesday -->
+<div class="flex flex-col items-center gap-2">
+<span class="text-xs text-slate-400 font-medium">W</span>
+<div class="w-8 h-8 rounded-full flex items-center justify-center bg-primary text-black font-bold text-xs shadow-[0_0_15px_-3px_rgba(32,211,238,0.5)]">
+<span class="material-icons-round text-sm">check</span>
+</div>
+</div>
+<!-- Thursday -->
+<div class="flex flex-col items-center gap-2">
+<span class="text-xs text-slate-400 font-medium">T</span>
+<div class="w-8 h-8 rounded-full flex items-center justify-center bg-primary text-black font-bold text-xs shadow-[0_0_15px_-3px_rgba(32,211,238,0.5)]">
+<span class="material-icons-round text-sm">check</span>
+</div>
+</div>
+<!-- Friday (Today) -->
+<div class="flex flex-col items-center gap-2">
+<span class="text-xs text-primary font-bold">F</span>
+<div class="w-8 h-8 rounded-full flex items-center justify-center border-2 border-primary bg-primary/20 text-primary font-bold text-xs animate-pulse">
+</div>
+</div>
+<!-- Saturday -->
+<div class="flex flex-col items-center gap-2 opacity-50">
+<span class="text-xs text-slate-500 font-medium">S</span>
+<div class="w-8 h-8 rounded-full flex items-center justify-center bg-slate-100 dark:bg-white/10 text-slate-400 text-xs">
+</div>
+</div>
+<!-- Sunday -->
+<div class="flex flex-col items-center gap-2 opacity-50">
+<span class="text-xs text-slate-500 font-medium">S</span>
+<div class="w-8 h-8 rounded-full flex items-center justify-center bg-slate-100 dark:bg-white/10 text-slate-400 text-xs">
+</div>
+</div>
+</div>
+<p class="mt-4 text-center text-sm text-slate-600 dark:text-slate-300">
+                        You're crushing it! Complete today's lesson to keep the streak alive.
+                    </p>
+</div>
+</section>
+<!-- XP Growth Chart -->
+<section>
+<div class="flex items-end justify-between mb-4">
+<div>
+<h2 class="text-sm font-medium uppercase tracking-wider text-slate-500 dark:text-slate-400">XP Growth</h2>
+<div class="text-2xl font-bold text-slate-900 dark:text-white mt-1">+1,240 <span class="text-sm font-normal text-slate-500 dark:text-slate-400">XP this week</span></div>
+</div>
+<select class="bg-transparent text-xs font-medium text-primary border-none focus:ring-0 cursor-pointer pr-6 py-0 outline-none">
+<option>This Week</option>
+<option>Last Week</option>
+</select>
+</div>
+<div class="bg-white dark:bg-white/5 border border-slate-200 dark:border-white/5 rounded-xl p-5 shadow-sm relative overflow-hidden h-64">
+<!-- Graph Background Grid Lines -->
+<div class="absolute inset-0 px-5 py-5 flex flex-col justify-between pointer-events-none opacity-20">
+<div class="w-full h-px bg-slate-400 border-t border-dashed border-slate-400"></div>
+<div class="w-full h-px bg-slate-400 border-t border-dashed border-slate-400"></div>
+<div class="w-full h-px bg-slate-400 border-t border-dashed border-slate-400"></div>
+<div class="w-full h-px bg-slate-400 border-t border-dashed border-slate-400"></div>
+<div class="w-full h-px bg-slate-400 border-t border-dashed border-slate-400"></div>
+</div>
+<!-- SVG Chart -->
+<div class="relative h-full w-full flex items-end pb-6">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 300 150">
+<!-- Gradient Definition -->
+<defs>
+<lineargradient id="gradient" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:#20d3ee;stop-opacity:0.3"></stop>
+<stop offset="100%" style="stop-color:#20d3ee;stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<!-- Area Fill -->
+<path d="M0,150 L0,100 C30,90 60,110 90,80 C120,50 150,60 180,40 C210,20 240,30 270,10 L300,5 L300,150 Z" fill="url(#gradient)"></path>
+<!-- Line -->
+<path class="drop-shadow-[0_0_10px_rgba(32,211,238,0.5)]" d="M0,100 C30,90 60,110 90,80 C120,50 150,60 180,40 C210,20 240,30 270,10 L300,5" fill="none" stroke="#20d3ee" stroke-linecap="round" stroke-width="3"></path>
+<!-- Active Point -->
+<circle cx="270" cy="10" fill="#101f22" r="5" stroke="#20d3ee" stroke-width="3"></circle>
+</svg>
+<!-- Tooltip (Simulated) -->
+<div class="absolute top-[20%] right-[8%] bg-slate-800 text-white text-xs px-2 py-1 rounded shadow-lg transform -translate-y-full mb-2">
+                            420 XP
+                            <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 rotate-45 w-2 h-2 bg-slate-800"></div>
+</div>
+</div>
+<!-- X-Axis Labels -->
+<div class="absolute bottom-2 left-5 right-5 flex justify-between text-[10px] font-medium text-slate-400 uppercase">
+<span>Mon</span>
+<span>Tue</span>
+<span>Wed</span>
+<span>Thu</span>
+<span>Fri</span>
+<span>Sat</span>
+<span>Sun</span>
+</div>
+</div>
+</section>
+<!-- Badges Grid -->
+<section>
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-sm font-medium uppercase tracking-wider text-slate-500 dark:text-slate-400">Recent Achievements</h2>
+<a class="text-xs font-semibold text-primary hover:text-primary/80" href="#">View All</a>
+</div>
+<div class="grid grid-cols-3 gap-4">
+<!-- Badge 1: Interview Ready -->
+<div class="group relative flex flex-col items-center">
+<div class="w-full aspect-square bg-white dark:bg-white/5 border border-slate-200 dark:border-white/5 rounded-xl flex items-center justify-center mb-2 group-hover:border-primary/50 transition-colors relative overflow-hidden">
+<!-- Badge Glow Background -->
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300">
+<span class="material-icons-round text-2xl">work_outline</span>
+</div>
+</div>
+<span class="text-xs font-medium text-center text-slate-700 dark:text-slate-300 leading-tight">Interview Ready</span>
+</div>
+<!-- Badge 2: Logic Master -->
+<div class="group relative flex flex-col items-center">
+<div class="w-full aspect-square bg-white dark:bg-white/5 border border-slate-200 dark:border-white/5 rounded-xl flex items-center justify-center mb-2 group-hover:border-primary/50 transition-colors relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300">
+<span class="material-icons-round text-2xl">psychology</span>
+</div>
+</div>
+<span class="text-xs font-medium text-center text-slate-700 dark:text-slate-300 leading-tight">Logic Master</span>
+</div>
+<!-- Badge 3: AI Aware (Locked state example, though user asked for icons, adding variety) -->
+<div class="group relative flex flex-col items-center opacity-60">
+<div class="w-full aspect-square bg-slate-100 dark:bg-white/5 border border-dashed border-slate-300 dark:border-white/10 rounded-xl flex items-center justify-center mb-2 relative overflow-hidden">
+<div class="w-12 h-12 bg-slate-200 dark:bg-white/5 rounded-full flex items-center justify-center text-slate-400 dark:text-slate-500">
+<span class="material-icons-round text-2xl">smart_toy</span>
+</div>
+<!-- Lock Icon overlay -->
+<div class="absolute top-2 right-2 text-slate-400 dark:text-slate-600">
+<span class="material-icons-round text-[10px]">lock</span>
+</div>
+</div>
+<span class="text-xs font-medium text-center text-slate-500 dark:text-slate-400 leading-tight">AI Aware</span>
+</div>
+</div>
+</section>
+<!-- Motivational Card -->
+<div class="bg-gradient-to-r from-primary/20 to-blue-600/10 border border-primary/20 rounded-xl p-4 flex items-center gap-4">
+<div class="p-2 bg-primary/20 rounded-lg text-primary">
+<span class="material-icons-round">auto_graph</span>
+</div>
+<div>
+<h3 class="text-sm font-bold text-slate-900 dark:text-white">Top 5% of Learners</h3>
+<p class="text-xs text-slate-600 dark:text-slate-400 mt-0.5">Your consistency is paying off. You're outpacing most users this week!</p>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 w-full max-w-md bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-lg border-t border-slate-200 dark:border-white/5 pb-6 pt-2 px-6 flex justify-between items-end z-40">
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors" href="#">
+<span class="material-icons-round text-2xl">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors" href="#">
+<span class="material-icons-round text-2xl">school</span>
+<span class="text-[10px] font-medium">Learn</span>
+</a>
+<!-- Active Tab -->
+<a class="flex flex-col items-center gap-1 p-2 text-primary" href="#">
+<span class="material-icons-round text-2xl drop-shadow-[0_0_8px_rgba(32,211,238,0.5)]">bar_chart</span>
+<span class="text-[10px] font-medium">Analytics</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors" href="#">
+<span class="material-icons-round text-2xl">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</a>
+</nav>
+</div>
+</body></html>

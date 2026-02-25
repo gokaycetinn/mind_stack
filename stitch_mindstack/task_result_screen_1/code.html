@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MindStack - Task Result</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#20d3ee",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#101f22",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"],
+                        "mono": ["Fira Code", "monospace"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hide for cleaner mobile look */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-100 min-h-screen flex items-center justify-center p-4">
+<!-- Mobile Container -->
+<div class="w-full max-w-[390px] h-[844px] bg-white dark:bg-[#15262a] rounded-[2.5rem] shadow-2xl overflow-hidden relative border-[8px] border-slate-900 flex flex-col">
+<!-- Status Bar Placeholder -->
+<div class="absolute top-0 w-full h-12 z-20 flex justify-between items-center px-6 pt-2">
+<span class="text-xs font-semibold dark:text-white">9:41</span>
+<div class="flex gap-1.5">
+<div class="w-4 h-4 bg-current rounded-sm opacity-20"></div>
+<div class="w-4 h-4 bg-current rounded-sm opacity-20"></div>
+<div class="w-6 h-3 border border-current rounded-[2px] relative"><div class="absolute inset-[1px] bg-current w-[80%]"></div></div>
+</div>
+</div>
+<!-- Main Content Area -->
+<div class="flex-1 flex flex-col relative z-10 overflow-y-auto no-scrollbar pt-12 pb-24 px-6">
+<!-- Success Animation Section -->
+<div class="mt-8 mb-6 flex flex-col items-center justify-center relative">
+<!-- Glow Effect -->
+<div class="absolute w-48 h-48 bg-primary/20 rounded-full blur-[60px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+<!-- Icon Circle -->
+<div class="relative w-28 h-28 rounded-full bg-gradient-to-tr from-cyan-900/40 to-primary/20 border border-primary/30 flex items-center justify-center shadow-[0_0_30px_-5px_rgba(34,211,238,0.3)]">
+<span class="material-icons text-6xl text-primary animate-pulse">check_circle</span>
+<!-- Floating particles decoration -->
+<div class="absolute -top-2 -right-2 w-4 h-4 rounded-full bg-primary animate-ping opacity-75"></div>
+<div class="absolute bottom-2 -left-1 w-2 h-2 rounded-full bg-white opacity-40"></div>
+</div>
+</div>
+<!-- Title -->
+<div class="text-center mb-8">
+<h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white mb-2">Great thinking 👏</h1>
+<p class="text-slate-500 dark:text-slate-400 text-sm">You solved the recursion problem perfectly.</p>
+</div>
+<!-- Stats Row -->
+<div class="grid grid-cols-2 gap-4 mb-8">
+<!-- XP Card -->
+<div class="bg-slate-50 dark:bg-[#1a2c32] p-4 rounded-2xl border border-slate-200 dark:border-white/5 flex flex-col items-center justify-center relative overflow-hidden group">
+<div class="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors"></div>
+<span class="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">XP Earned</span>
+<div class="flex items-center gap-1">
+<span class="text-2xl font-bold text-primary">+45</span>
+</div>
+</div>
+<!-- Streak Card -->
+<div class="bg-slate-50 dark:bg-[#1a2c32] p-4 rounded-2xl border border-slate-200 dark:border-white/5 flex flex-col items-center justify-center relative overflow-hidden group">
+<div class="absolute inset-0 bg-orange-500/5 group-hover:bg-orange-500/10 transition-colors"></div>
+<span class="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1">Daily Streak</span>
+<div class="flex items-center gap-1">
+<span class="text-2xl">🔥</span>
+<span class="text-2xl font-bold text-orange-400">12</span>
+</div>
+</div>
+</div>
+<!-- Explanation / "Why this works" Card -->
+<div class="bg-slate-50 dark:bg-[#1a2c32] rounded-2xl border border-slate-200 dark:border-white/5 overflow-hidden">
+<div class="px-5 py-3 border-b border-slate-200 dark:border-white/5 bg-slate-100/50 dark:bg-white/5 flex items-center gap-2">
+<span class="material-icons text-lg text-primary">lightbulb</span>
+<h3 class="text-sm font-semibold text-slate-700 dark:text-slate-200">Why this works</h3>
+</div>
+<div class="p-5">
+<p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
+                        By defining the base case first <code class="bg-slate-200 dark:bg-black/30 px-1.5 py-0.5 rounded text-primary font-mono text-xs">if (n &lt;= 1) return 1</code>, you prevent the infinite loop. The recursive step then correctly breaks the problem down.
+                    </p>
+<!-- Code Snippet Visualization -->
+<div class="bg-[#0f1719] rounded-lg p-3 font-mono text-xs text-slate-300 overflow-x-auto border border-white/5 shadow-inner">
+<div class="flex gap-2 mb-1 opacity-50">
+<div class="w-2.5 h-2.5 rounded-full bg-red-500"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-green-500"></div>
+</div>
+<pre><span class="text-purple-400">function</span> <span class="text-blue-400">fact</span>(n) {
+  <span class="text-slate-500">// Correct logic here</span>
+  <span class="text-purple-400">if</span> (n &lt;= <span class="text-orange-400">1</span>) <span class="text-purple-400">return</span> <span class="text-orange-400">1</span>;
+  <span class="text-purple-400">return</span> n * <span class="text-blue-400">fact</span>(n - <span class="text-orange-400">1</span>);
+}</pre>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Action Area -->
+<div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-background-light via-background-light to-transparent dark:from-background-dark dark:via-background-dark dark:to-transparent z-20 pb-8">
+<button class="w-full bg-primary hover:bg-cyan-300 active:bg-cyan-500 text-slate-900 font-bold text-lg py-4 rounded-xl shadow-[0_0_20px_-5px_rgba(34,211,238,0.4)] transition-all transform active:scale-[0.98] flex items-center justify-center gap-2 group">
+                Next Task
+                <span class="material-icons text-xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<div class="h-1 bg-slate-900 dark:bg-white rounded-full w-1/3 mx-auto mt-6 opacity-20"></div>
+</div>
+</div>
+</body></html>

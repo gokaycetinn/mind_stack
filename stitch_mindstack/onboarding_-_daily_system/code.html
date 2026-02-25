@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Onboarding - Daily System</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<!-- Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#20d3ee",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#0F172A", // Matching the requested deep slate
+                        "surface-dark": "#1e293b",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "mono": ["JetBrains Mono", "monospace"],
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "1.5rem", "xl": "2rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom timeline line effect */
+        .timeline-line {
+            position: absolute;
+            top: 2rem;
+            bottom: 2rem;
+            left: 24px;
+            width: 2px;
+            background: linear-gradient(to bottom, #20d3ee 0%, #20d3ee 70%, #334155 100%);
+            z-index: 0;
+        }
+        
+        /* Subtle glow animation for the AI step */
+        @keyframes subtle-pulse {
+            0%, 100% { box-shadow: 0 0 15px -5px rgba(32, 211, 238, 0.3); }
+            50% { box-shadow: 0 0 25px -5px rgba(32, 211, 238, 0.6); }
+        }
+        
+        .glow-ai {
+            animation: subtle-pulse 3s infinite ease-in-out;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased h-screen flex flex-col overflow-hidden selection:bg-primary selection:text-background-dark">
+<!-- Top Navigation -->
+<nav class="flex justify-between items-center px-6 pt-6 pb-2 shrink-0 z-10">
+<!-- Logo/Brand Mark -->
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
+<span class="material-icons-round text-primary text-xl">layers</span>
+</div>
+</div>
+<button class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-primary transition-colors">
+            Skip
+        </button>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col px-6 pt-4 pb-8 overflow-y-auto scrollbar-hide">
+<!-- Header -->
+<header class="mb-8">
+<h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white mb-3">
+                Just <span class="text-primary">10 minutes</span> a day
+            </h1>
+<p class="text-slate-500 dark:text-slate-400 text-lg leading-snug">
+                Build a habit that sticks. Master complex concepts in bite-sized chunks.
+            </p>
+</header>
+<!-- Vertical Timeline -->
+<div class="relative flex-1 flex flex-col justify-center space-y-8 pl-2 pr-2">
+<!-- Timeline Line Background -->
+<div class="timeline-line dark:from-primary dark:via-primary dark:to-slate-700"></div>
+<!-- Step 1: Think -->
+<div class="relative z-10 flex items-start group">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-surface-dark border-2 border-primary flex items-center justify-center shadow-lg shadow-primary/20">
+<span class="material-icons-round text-primary text-xl">psychology</span>
+</div>
+<div class="ml-6 flex-1 pt-1">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-bold text-lg text-white">Think</h3>
+<p class="text-sm text-slate-400 mt-1">Logic puzzles to warm up</p>
+</div>
+<div class="bg-primary/10 border border-primary/20 rounded-full px-3 py-1 flex items-center gap-1">
+<span class="material-icons-round text-primary text-[10px]">bolt</span>
+<span class="text-xs font-mono font-bold text-primary">+10 XP</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Step 2: Solve -->
+<div class="relative z-10 flex items-start group">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-surface-dark border-2 border-primary flex items-center justify-center shadow-lg shadow-primary/20">
+<span class="material-icons-round text-primary text-xl">terminal</span>
+</div>
+<div class="ml-6 flex-1 pt-1">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-bold text-lg text-white">Solve</h3>
+<p class="text-sm text-slate-400 mt-1">Fix a bug or write a function</p>
+</div>
+<div class="bg-primary/10 border border-primary/20 rounded-full px-3 py-1 flex items-center gap-1">
+<span class="material-icons-round text-primary text-[10px]">bolt</span>
+<span class="text-xs font-mono font-bold text-primary">+20 XP</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Step 3: Decide -->
+<div class="relative z-10 flex items-start group">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-surface-dark border-2 border-primary flex items-center justify-center shadow-lg shadow-primary/20">
+<span class="material-icons-round text-primary text-xl">alt_route</span>
+</div>
+<div class="ml-6 flex-1 pt-1">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-bold text-lg text-white">Decide</h3>
+<p class="text-sm text-slate-400 mt-1">Architecture trade-offs</p>
+</div>
+<div class="bg-primary/10 border border-primary/20 rounded-full px-3 py-1 flex items-center gap-1">
+<span class="material-icons-round text-primary text-[10px]">bolt</span>
+<span class="text-xs font-mono font-bold text-primary">+30 XP</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Step 4: Improve (AI) - Highlighted -->
+<div class="relative z-10 flex items-start group">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary border-4 border-primary/30 flex items-center justify-center glow-ai text-background-dark">
+<span class="material-icons-round text-xl font-bold">auto_awesome</span>
+</div>
+<div class="ml-6 flex-1 pt-1">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-bold text-lg text-primary">Improve (AI)</h3>
+<p class="text-sm text-slate-300 mt-1">AI feedback on your code</p>
+</div>
+<div class="bg-primary text-background-dark font-bold rounded-full px-3 py-1 flex items-center gap-1 shadow-lg shadow-primary/20">
+<span class="material-icons-round text-[10px]">star</span>
+<span class="text-xs font-mono">+50 XP</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Action Area -->
+<footer class="px-6 pb-8 pt-4 bg-background-light dark:bg-background-dark/95 backdrop-blur-sm z-20 shrink-0">
+<!-- CTA Button -->
+<button class="w-full bg-primary hover:bg-cyan-300 text-background-dark font-display font-bold text-lg py-4 rounded-full shadow-[0_0_20px_rgba(32,211,238,0.3)] transition-all active:scale-[0.98] mb-8 flex items-center justify-center gap-2 group">
+<span>Build my streak</span>
+<span class="material-icons-round text-xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<!-- Pagination Dots -->
+<div class="flex justify-center items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-slate-700"></div>
+<div class="w-2 h-2 rounded-full bg-slate-700"></div>
+<div class="w-8 h-2 rounded-full bg-primary shadow-sm shadow-primary/50"></div>
+<div class="w-2 h-2 rounded-full bg-slate-700"></div>
+</div>
+</footer>
+</body></html>
