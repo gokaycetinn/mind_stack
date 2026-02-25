@@ -1,6 +1,8 @@
 # MindStack (SwiftUI)
 
-![MindStack App Preview](mindstack.png)
+<p align="center">
+	<img src="mindstack.png" alt="MindStack App Preview" width="260" />
+</p>
 
 MindStack is a native iOS learning app built with SwiftUI to help users think like developers through structured daily challenges, task flows, and progress-driven learning.
 
